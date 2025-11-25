@@ -1,0 +1,23 @@
+/* #root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+} */
+
+.bgImage {
+  background: url("https://www.gostpp.ru/images/1tat.jpg") no-repeat center;
+  width: 100vw;
+  height: 100vh;
+  background-size: cover;
+}
+
+.bgLinerBlack {
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  background-image: linear-gradient(to bottom,#42181816, rgba(0, 0, 0, 0.706));
+  display: flex;
+  align-items: start;
+  justify-content: center;
+}
