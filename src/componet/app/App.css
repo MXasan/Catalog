@@ -16,7 +16,7 @@
   height: 100vh;
   width: 100vw;
   position: absolute;
-  background-image: linear-gradient(to bottom,#42181816, rgba(0, 0, 0, 0.706));
+  background-image: linear-gradient(to bottom,#42181816, rgba(0, 0, 0, 0.90));
   display: flex;
   align-items: start;
   justify-content: center;

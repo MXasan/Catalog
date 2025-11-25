@@ -6,7 +6,7 @@ const Card = () => {
     return (
         <>
             <h1>hello card</h1>
-            <Cards />
+            <Cards /> 
         </>
 
     )
