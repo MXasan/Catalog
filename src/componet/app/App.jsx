@@ -3,7 +3,7 @@ import './App.css'
 import Navbar from '../navbar/navbar'
 import Header from '../header/header'
 import MainSection from '../main/MainSection'
-import Card from '../card/card'
+import Card from '../cardwrapper/cardswrapper'
 
 function App() {
 
@@ -13,8 +13,8 @@ function App() {
     fetch('/public/data.json')
       .then(res => res.json())
       .then(data => setProduct(data))
-      .catch(err => console.log(err));
-  }, []);
+      .catch(err => console.log(err))
+  }, [])
 
   // console.log(product);
 
@@ -22,7 +22,6 @@ function App() {
   return (
     <>
       <div className="body">
-
         <div className="bgImage">
           <div className="bgLinerBlack">
             <div className="container">

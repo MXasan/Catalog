@@ -1,15 +1,14 @@
-import React from 'react'
+// cards main wrapper
 import './card.css'
 import Cards from './cards/cards'
 
-const Card = ({product}) => {
-    console.log(product);
-    
+const Card = ({ product }) => {
+    console.log(product)
+
     return (
         <>
             <Cards product={product} />
         </>
-
     )
 }
 
