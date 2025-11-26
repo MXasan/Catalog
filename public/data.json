@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "title": "Kolbasa Best",
+    "category": "Go‘sht mahsuloti",
+    "weight": "450 g",
+    "image": "kolbasaBest"
+  },
+  {
+    "id": 2,
+    "title": "Kolbasa Lazzet",
+    "category": "Go‘sht mahsuloti",
+    "weight": "500 g",
+    "image": "kolbasaLazzet"
+  },
+  {
+    "id": 3,
+    "title": "Kolbasa Lazzatli",
+    "category": "Go‘sht mahsuloti",
+    "weight": "400 g",
+    "image": "kolbasaLazzatli"
+  },
+  {
+    "id": 4,
+    "title": "Safia Suti",
+    "category": "Sut mahsuloti",
+    "weight": "1 L",
+    "image": "kolbasaSafia"
+  },
+  {
+    "id": 5,
+    "title": "Sharqoniy Kotta",
+    "category": "Sut mahsuloti",
+    "weight": "900 g",
+    "image": "sirKottaSharqoniy"
+  },
+  {
+    "id": 6,
+    "title": "Sharqoniy Sir",
+    "category": "Sut mahsuloti",
+    "weight": "750 g",
+    "image": "sirSharqoniy"
+  }
+]

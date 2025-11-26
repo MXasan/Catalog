@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react'
 import './App.css'
 import Navbar from '../navbar/navbar'
 import Header from '../header/header'
@@ -5,6 +6,18 @@ import MainSection from '../main/MainSection'
 import Card from '../card/card'
 
 function App() {
+
+  const [product, setProduct] = useState([])
+
+  useEffect(() => {
+    fetch('/public/data.json')
+      .then(res => res.json())
+      .then(data => setProduct(data))
+      .catch(err => console.log(err));
+  }, []);
+
+  // console.log(product);
+
 
   return (
     <>
@@ -20,7 +33,7 @@ function App() {
         </div>
         <div className="container">
           <MainSection />
-          <Card />
+          <Card product={product} />
         </div>
       </div>
 

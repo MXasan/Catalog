@@ -2,11 +2,12 @@ import React from 'react'
 import './card.css'
 import Cards from './cards/cards'
 
-const Card = () => {
+const Card = ({product}) => {
+    console.log(product);
+    
     return (
         <>
-            <h1>hello card</h1>
-            <Cards /> 
+            <Cards product={product} />
         </>
 
     )
