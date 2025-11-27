@@ -26,10 +26,10 @@ const Cards = ({ key, product }) => {
         <div className="cardButton">
           {
             addToCart ? (
-              <QuantityButton className="removeFromCart" onClick={() =>
+              <QuantityButton onClick={() =>
                 setAddToCart(false)} quantity={quantity} setQuantity={setQuantity} />
             ) : (
-              <button className="addToCart btn" onClick={() =>
+              <button className="addToCart" onClick={() =>
                 setAddToCart(true)}>Add to Cart</button>
             )
           }

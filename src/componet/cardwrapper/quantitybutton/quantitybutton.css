@@ -1,7 +1,8 @@
 .quantity {
 	display: flex;
+	width: 100%;
 	align-items: center;
 	justify-content: center;
-	background: gray;
+	background: rgb(230, 230, 230);
+	border-radius: 40px;
 }
-
