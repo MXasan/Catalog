@@ -29,7 +29,7 @@ function App() {
             </div>
           </div>
         </div>
-        <div className="container">
+        <div className="container__Wapper">
           <Card product={product} />
         </div>
       </div>

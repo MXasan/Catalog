@@ -1,8 +1,10 @@
 .cardsWrapper {
+	margin-top: 20px;
 	display: flex;
 	align-items: center;
-	justify-content: center;
+	justify-content: start;
 	gap: 50px;
 	flex-wrap: wrap;
-	max-width:70%;
+	flex-direction: row;
+	max-width: 98%;
 }
