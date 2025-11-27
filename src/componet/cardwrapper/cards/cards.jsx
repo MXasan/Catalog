@@ -1,9 +1,19 @@
-// products card component with tailwind css
-const Cards = ({ key, product }) => {
+// products card component
+const Cards = ({ product }) => {
+  if (!Array.isArray(product)) {
+    return <p>Loading...</p>
+  }
+
   return (
-    <div className="card" key={key}>
-      <img src={product.image} alt={product.name} className="cardImage" />
-      <h3 className="cardTitle">{product.title}</h3>
+    <div>
+      {product.map(item => {
+        return (
+          <div className="card" key={item.id}>
+            <img src={item.image} alt={item.name} className="cardImage" />
+            <h3 className="cardTitle">{item.title}</h3>
+          </div>
+        )
+      })}
     </div>
   )
 }
