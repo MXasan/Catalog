@@ -1,45 +1,45 @@
+@import 'tailwindcss';
+
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  /* border: 1px solid red; */
-  font-family: 'IBM Plex Sans Hebrew' , sans-serif;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	border: 1px solid red;
+	font-family: 'IBM Plex Sans Hebrew', sans-serif;
 }
 
 :root {
-  --cream-color: #FFFBF0;
-  --burgandy-color: #70010B;
-  --burgandy-color-50: #8b000079;
-
-  --text-size: 18px;
+	--cream-color: #fffbf0;
+	--burgandy-color: #70010b;
+	--burgandy-color-50: #8b000079;
+	--text-size: 18px;
 }
 
 .body {
-  background: var(--cream-color);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
+	background: var(--cream-color);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
 }
 
 .container {
-  width: 100%;
-  max-width: 1580px;
+	width: 100%;
+	max-width: 14w80px;
 }
 
-
 h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+	font-size: 3.2em;
+	line-height: 1.1;
 }
 
 button {
-  background: var(--burgandy-color);
-  color: var(--cream-color);
-  padding: 15px 29px;
-  border-radius: 25px;
-  font-weight: 600;
-  font-size: var(--text-size);
-  border: none;
-  cursor: pointer;
+	background: var(--burgandy-color);
+	color: var(--cream-color);
+	padding: 15px 29px;
+	border-radius: 25px;
+	font-weight: 600;
+	font-size: var(--text-size);
+	border: none;
+	cursor: pointer;
 }

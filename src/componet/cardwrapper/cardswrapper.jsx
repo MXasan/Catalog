@@ -3,12 +3,12 @@ import './card.css'
 import Cards from './cards/cards'
 
 const Card = ({ product }) => {
-    console.log(product)
-
     return (
-        <>
-            <Cards product={product} />
-        </>
+        <div className='cardsWrapper container' >
+            {product.map(item => (
+                <Cards key={item.id} product={item} />
+            ))}
+        </div>
     )
 }
 
