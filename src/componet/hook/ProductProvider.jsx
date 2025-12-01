@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { ProductContext } from "./ProductContext";
+import { ProductContext } from "./ProductContext"
 
 const ProductProvider = ({ children }) => {
     const [value, setValue] = useState("")
@@ -12,7 +12,6 @@ const ProductProvider = ({ children }) => {
             .catch(err => console.log(err))
     }, [])
 
-    console.log(value)
     return (
         <ProductContext.Provider value={{ value, setValue }}>
             {children}

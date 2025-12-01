@@ -1,28 +1,16 @@
+import { Route, Routes } from 'react-router-dom'
+import Cart from '../../pages/cart'
+import Home from '../../pages/home'
 import './App.css'
-import Header from '../header/header'
-import Card from '../cardwrapper/cardswrapper'
-import Navbar from '../navbar/navbar'
 
 function App() {
-
   return (
     <>
-      <div className="body">
-        <div className="bgImage">
-          <div className="bgLinerBlack">
-            <div className="container">
-              <Navbar />
-              <Header />
-            </div>
-          </div>
-        </div>
-        <div className="container__Wapper">
-          <Card/>
-        </div>
-      </div>
-
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/cart" element={<Cart />} />
+      </Routes>
     </>
-
   )
 }
 

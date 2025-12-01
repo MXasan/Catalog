@@ -1,0 +1,23 @@
+.orderButtonWrapper {
+	position: fixed;
+	bottom: 20px;
+	left: 50%;
+	transform: translateX(-50%);
+	z-index: 1000;
+}
+
+.orderButton {
+	background-color: var(--burgandy-color);
+	color: white;
+	padding: 15px 40px;
+	border: none;
+	border-radius: 30px;
+	font-size: 16px;
+	font-weight: bold;
+	cursor: pointer;
+	transition: all 0.1s;
+}
+
+.orderButton:hover {
+	scale: 1.03;
+}

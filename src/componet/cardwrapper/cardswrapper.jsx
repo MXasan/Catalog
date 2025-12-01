@@ -1,11 +1,9 @@
-import useProduct from '../hook/useProduct';
+import useProduct from '../hook/useProduct'
 import './card.css'
-import Cards from './cards/cards';
+import Cards from './cards/cards'
 
 const Card = () => {
-
-    const { value } = useProduct();
-
+    const { value } = useProduct()
     return (
         <>
             <h1 className='titleForPage'><span>OILAVI</span> MAXSULOT</h1>
@@ -19,7 +17,7 @@ const Card = () => {
                 )}
             </div>
         </>
-    );
+    )
 }
 
-export default Card;
+export default Card
