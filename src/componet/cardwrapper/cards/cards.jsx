@@ -11,28 +11,19 @@ const Cards = ({ key, product }) => {
     <div className="maincard" key={key}>
       <div className='cardImageWrapper'>
         <img src={product.image} alt={product.name} className='cardWrapper' />
-      </div>
-
-      <div className="cardTitle">
+      </div>      <div className="cardTitle">
         <div className="cardInfo">
-          <h3>
-            {product.title}
-          </h3>
-          <p>
-            {product.weight}
-          </p>
+          <h3>{product.title}</h3>
+          <p>{product.weight}</p>
         </div>
-        <div />
         <div className="cardButton">
-          {
-            addToCart ? (
-              <QuantityButton onClick={() =>
-                setAddToCart(false)} quantity={quantity} setQuantity={setQuantity} />
-            ) : (
-              <button className="addToCart" onClick={() =>
-                setAddToCart(true)}>Add to Cart</button>
-            )
-          }
+          {addToCart ? (
+            <QuantityButton onClick={() =>
+              setAddToCart(false)} quantity={quantity} setQuantity={setQuantity} />
+          ) : (
+            <button className="addToCart" onClick={() =>
+              setAddToCart(true)}>Add to Cart</button>
+          )}
         </div>
         <div className="cardDescription">
           <p>{product.description}</p>
