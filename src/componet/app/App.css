@@ -6,18 +6,18 @@
 } */
 
 .bgImage {
-  background: url("https://www.gostpp.ru/images/1tat.jpg") no-repeat center;
-  width: 100vw;
-  height: 100vh;
-  background-size: cover;
+	background: url('https://www.gostpp.ru/images/1tat.jpg') no-repeat center;
+	width: 100%;
+	height: 100vh;
+	background-size: cover;
 }
 
 .bgLinerBlack {
-  height: 100vh;
-  width: 100vw;
-  position: absolute;
-  background-image: linear-gradient(to bottom,#42181816, rgba(0, 0, 0, 0.90));
-  display: flex;
-  align-items: start;
-  justify-content: center;
+	height: 100vh;
+	width: 100%;
+	position: absolute;
+	background-image: linear-gradient(to bottom, #42181816, rgba(0, 0, 0, 0.9));
+	display: flex;
+	align-items: start;
+	justify-content: center;
 }

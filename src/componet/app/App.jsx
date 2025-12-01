@@ -1,9 +1,8 @@
 import { useState, useEffect } from 'react'
 import './App.css'
-import Navbar from '../navbar/navbar'
 import Header from '../header/header'
-import MainSection from '../main/MainSection'
 import Card from '../cardwrapper/cardswrapper'
+import Navbar from '../navbar/navbar'
 
 function App() {
 
@@ -30,8 +29,7 @@ function App() {
             </div>
           </div>
         </div>
-        <div className="container">
-          <MainSection />
+        <div className="container__Wapper">
           <Card product={product} />
         </div>
       </div>
