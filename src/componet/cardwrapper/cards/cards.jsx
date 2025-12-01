@@ -8,7 +8,7 @@ const Cards = ({ key, product }) => {
   const [quantity, setQuantity] = useState(0)
 
   return (
-    <div className="maincard" key={key}>  
+    <div className="maincard" key={key}>
       <div className='cardImageWrapper'>
         <img src={product.image} alt={product.name} className='cardWrapper' />
       </div>
@@ -22,7 +22,6 @@ const Cards = ({ key, product }) => {
             {product.weight}
           </p>
         </div>
-        <div />
         <div className="cardButton">
           {
             addToCart ? (
@@ -38,7 +37,7 @@ const Cards = ({ key, product }) => {
           <p>{product.description}</p>
         </div>
       </div>
-    </div>
+    </ div>
   )
 }
 
