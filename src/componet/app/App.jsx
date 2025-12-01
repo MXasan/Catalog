@@ -1,10 +1,8 @@
-import { useState, useEffect } from 'react'
 import './App.css'
-import Header from '../header/header'
-import Card from '../cardwrapper/cardswrapper'
-import Navbar from '../navbar/navbar'
+import { useState, useEffect } from 'react'
 import { Route, Routes } from 'react-router'
-import Cart from '../cart/cart'
+import Home from '../../pages/home'
+import Cart from '../../pages/cart'
 
 function App() {
 
@@ -18,33 +16,14 @@ function App() {
   }, [])
 
   return (
+    <>
+    
     <Routes>
-      <>
-        <Route path="/" element={
-          <div className="body">
-            <div className="bgImage">
-              <div className="bgLinerBlack">
-                <div className="container">
-                  <Navbar />
-                  <Header />
-                </div>
-              </div>
-            </div>
-            <div className="container__Wapper">
-              <Card product={product} />
-            </div>
-          </div>
-        } />
-        <Route path="*" element={
-          <div className="body">
-            <div className="container">
-              <Navbar />
-              <Cart />
-            </div>
-          </div>
-        } />
-      </>
+      <Route path="/" element={<Home product={product} />} />
+      <Route path="/cart" element={<Cart />} />
+    
     </Routes>
+    </>
   )
 }
 

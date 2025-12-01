@@ -4,7 +4,8 @@ const Navbar = () => {
 	return (
 		<div className='container'>
 			<div className="navbarElememnts">
-				<h2 className='logo'>logo</h2>
+				<Link to="/"><h2 className='logo'>logo</h2></Link>
+				{/* <h2 className='logo'>logo</h2> */}
 				<div className="navZone">
 					<ul>
 						<li>MAXSULOT</li>

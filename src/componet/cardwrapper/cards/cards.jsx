@@ -1,5 +1,5 @@
-import { useState } from 'react'
 import './cards.css'
+import { useState } from 'react'
 import QuantityButton from '../quantitybutton/quantitybutton'
 
 // products card component with tailwind css
