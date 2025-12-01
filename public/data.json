@@ -34,11 +34,6 @@
 		"weight": "900 g",
 		"image": "https://placehold.co/300x400"
 	},
-	
-	
-	
-	
-	
 	{
 		"id": 6,
 		"title": "Sharqoniy Sir",
@@ -47,21 +42,21 @@
 		"image": "https://placehold.co/300x400"
 	},
 	{
-		"id": 6,
+		"id": 7,
 		"title": "Sharqoniy Sir",
 		"category": "Sut mahsuloti",
 		"weight": "750 g",
 		"image": "https://placehold.co/300x400"
 	},
 	{
-		"id": 6,
+		"id": 8,
 		"title": "Sharqoniy Sir",
 		"category": "Sut mahsuloti",
 		"weight": "750 g",
 		"image": "https://placehold.co/300x400"
 	},
 	{
-		"id": 6,
+		"id": 9,
 		"title": "Sharqoniy Sir",
 		"category": "Sut mahsuloti",
 		"weight": "750 g",

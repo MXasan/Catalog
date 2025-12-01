@@ -29,15 +29,18 @@
 	color: #333;
 	padding: 0 10px 0 10px;
 }
+
 .cardInfo {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
 }
-.cardInfo > p {
-	color: var(--grey-color);
+
+.cardInfo>p {
+	color: #626262;
 	font-weight: 500;
 }
+
 .cardButton {
 	width: 100%;
 	display: flex;
