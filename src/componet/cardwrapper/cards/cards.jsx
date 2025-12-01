@@ -8,7 +8,7 @@ const Cards = ({ key, product }) => {
   const [quantity, setQuantity] = useState(0)
 
   return (
-    <div className="maincard" key={key}>
+    <div className="maincard" key={key}>  
       <div className='cardImageWrapper'>
         <img src={product.image} alt={product.name} className='cardWrapper' />
       </div>
