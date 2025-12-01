@@ -10,7 +10,7 @@ const Cards = ({ key, product }) => {
   return (
     <div className="maincard" key={key}>
       <div className='cardImageWrapper'>
-        <img src={product.image} alt={product.name} className='cardWrapper' />
+        <img src={product.image} alt={product.name} className='cardWrapper' loading='lazy'/>
       </div>      <div className="cardTitle">
         <div className="cardInfo">
           <h3>{product.title}</h3>
