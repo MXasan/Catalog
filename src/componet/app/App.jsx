@@ -3,6 +3,8 @@ import './App.css'
 import Header from '../header/header'
 import Card from '../cardwrapper/cardswrapper'
 import Navbar from '../navbar/navbar'
+import { Route, Routes } from 'react-router'
+import Cart from '../cart/cart'
 
 function App() {
 
@@ -16,23 +18,33 @@ function App() {
   }, [])
 
   return (
-    <>
-      <div className="body">
-        <div className="bgImage">
-          <div className="bgLinerBlack">
-            <div className="container">
-              <Navbar />
-              <Header />
+    <Routes>
+      <>
+        <Route path="/" element={
+          <div className="body">
+            <div className="bgImage">
+              <div className="bgLinerBlack">
+                <div className="container">
+                  <Navbar />
+                  <Header />
+                </div>
+              </div>
+            </div>
+            <div className="container__Wapper">
+              <Card product={product} />
             </div>
           </div>
-        </div>
-        <div className="container__Wapper">
-          <Card product={product} />
-        </div>
-      </div>
-
-    </>
-
+        } />
+        <Route path="*" element={
+          <div className="body">
+            <div className="container">
+              <Navbar />
+              <Cart />
+            </div>
+          </div>
+        } />
+      </>
+    </Routes>
   )
 }
 

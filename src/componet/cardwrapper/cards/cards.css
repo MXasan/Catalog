@@ -1,59 +1,59 @@
-.maincard {
-	width: 300px;
-	height: 500px;
-	background-color: #fffbf0;
-	border-radius: 40px;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
+ .maincard {
+  width: 300px;
+  height: 500px;
+  background-color: #fffbf0;
+  border-radius: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .cardImageWrapper {
-	overflow: hidden;
-	border-radius: 15px;
+  overflow: hidden;
+  border-radius: 15px;
 }
 
 .cardImage {
-	border-radius: 15px;
+  border-radius: 15px;
 }
 
 .cardTitle {
-	display: flex;
-	width: 100%;
-	justify-content: space-between;
-	flex-direction: column;
-	gap: 10px;
-	font-size: 1.2rem;
-	font-weight: bold;
-	margin-top: 10px;
-	color: #333;
-	padding: 0 10px 0 10px;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-top: 10px;
+  color: #333;
+  padding: 0 10px 0 10px;
 }
 
 .cardInfo {
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .cardInfo>p {
-	color: #626262;
-	font-weight: 500;
+  color: #626262;
+  font-weight: 500;
 }
 
 .cardButton {
-	width: 100%;
-	display: flex;
-	align-items: center;
-	justify-content: center;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .addToCart {
-	transition: all 0.2s ease-in-out;
-	width: 99%;
-	border-radius: 40px;
+  transition: all 0.2s ease-in-out;
+  width: 99%;
+  border-radius: 40px;
 }
 
 .addToCart:hover {
-	opacity: 0.9;
+  opacity: 0.9;
 }
