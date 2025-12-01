@@ -3,16 +3,18 @@ import './navbar.css'
 const Navbar = () => {
 	return (
 		<div className='container'>
-			<div className="navbarElememnts">
-				<Link to="/"><h2 className='logo'>logo</h2></Link>
+			<div className='navbarElememnts'>
+				<Link to='/'>
+					<h2 className='logo'>logo</h2>
+				</Link>
 				{/* <h2 className='logo'>logo</h2> */}
-				<div className="navZone">
+				<div className='navZone'>
 					<ul>
 						<li>MAXSULOT</li>
 						<li>ALOQA</li>
 						<li>MALUMOT</li>
 					</ul>
-					<Link to="/cart">
+					<Link to='/cart'>
 						<button className='btn'>BUYURTMA</button>
 					</Link>
 				</div>

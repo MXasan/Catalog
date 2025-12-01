@@ -1,8 +1,8 @@
-import Cards from '../componet/cardwrapper/cards/cards'
+import Card from '../componet/cardwrapper/cardswrapper'
 import Header from '../componet/header/header'
 import Navbar from '../componet/navbar/navbar'
 
-const Home = ({ product }) => {
+const Home = () => {
 	return (
 		<div className="body">
 			<div className="bgImage">
@@ -14,7 +14,7 @@ const Home = ({ product }) => {
 				</div>
 			</div>
 			<div className="container__Wapper">
-				<Cards product={product} />
+				<Card />
 			</div>
 		</div>
 	)

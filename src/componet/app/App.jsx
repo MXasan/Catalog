@@ -1,28 +1,15 @@
-import './App.css'
-import { useState, useEffect } from 'react'
-import { Route, Routes } from 'react-router'
-import Home from '../../pages/home'
+import { Route, Routes } from 'react-router-dom'
 import Cart from '../../pages/cart'
+import Home from '../../pages/home'
+import './App.css'
 
 function App() {
-
-  const [product, setProduct] = useState([])
-
-  useEffect(() => {
-    fetch('/public/data.json')
-      .then(res => res.json())
-      .then(data => setProduct(data))
-      .catch(err => console.log(err))
-  }, [])
-
   return (
     <>
-    
-    <Routes>
-      <Route path="/" element={<Home product={product} />} />
-      <Route path="/cart" element={<Cart />} />
-    
-    </Routes>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/cart" element={<Cart />} />
+      </Routes>
     </>
   )
 }

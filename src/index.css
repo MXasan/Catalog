@@ -17,11 +17,11 @@
 }
 
 .body {
-	background: var(--cream-color);
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	flex-direction: column;
+  background: var(--cream-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .container {
@@ -38,19 +38,22 @@
 }
 
 h1 {
-	font-size: 3.2em;
-	line-height: 1.1;
+  font-size: 3.2em;
+  line-height: 1.1;
 }
 
 .btn {
-	background: var(--burgandy-color);
-	color: var(--cream-color);
-	padding: 15px 29px;
-	border-radius: 25px;
-	font-weight: 600;
-	font-size: var(--text-size);
-	border: none;
-	cursor: pointer;
+  background: var(--burgandy-color);
+  color: var(--cream-color);
+  padding: 15px 29px;
+  border-radius: 25px;
+  font-weight: 600;
+  font-size: var(--text-size);
+  border: none;
+  cursor: pointer;
+}
+button{
+  border: none;
 }
 
 button{
