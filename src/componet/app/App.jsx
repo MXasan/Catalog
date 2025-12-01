@@ -15,9 +15,6 @@ function App() {
       .catch(err => console.log(err))
   }, [])
 
-  // console.log(product);
-
-
   return (
     <>
       <div className="body">

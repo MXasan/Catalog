@@ -11,16 +11,10 @@ const Cards = ({ key, product }) => {
     <div className="maincard" key={key}>
       <div className='cardImageWrapper'>
         <img src={product.image} alt={product.name} className='cardWrapper' />
-      </div>
-
-      <div className="cardTitle">
+      </div>      <div className="cardTitle">
         <div className="cardInfo">
-          <h3>
-            {product.title}
-          </h3>
-          <p>
-            {product.weight}
-          </p>
+          <h3>{product.title}</h3>
+          <p>{product.weight}</p>
         </div>
         <div className="cardButton">
           {
