@@ -1,11 +1,11 @@
-@import 'tailwindcss';
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&display=swap');
 
 * {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
 	/* border: 1px solid red; */
-	font-family: 'IBM Plex Sans Hebrew', sans-serif;
+	font-family: 'IBM Plex Sans', sans-serif;
 }
 
 :root {
@@ -51,4 +51,8 @@ h1 {
 	font-size: var(--text-size);
 	border: none;
 	cursor: pointer;
+}
+
+button{
+	border: none;
 }
