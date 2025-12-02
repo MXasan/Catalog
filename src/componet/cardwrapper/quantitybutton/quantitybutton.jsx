@@ -1,10 +1,42 @@
 import './quantitybutton.css'
-export default function QuantityButton({ quantity,  }) {
+
+import { useState } from 'react'
+
+export default function QuantityButton() {
+	const [addToCart, setAddToCart] = useState(false);
+	const [quantity, setQuantity] = useState(0);
+
+	function DecriseProduct() {
+		setQuantity(quantity - 1)
+		if (quantity <= 0) {
+			setQuantity(0)
+			setAddToCart(false)
+		}
+	}
 	return (
-		<div className="quantity">
-			<button className="decrease BtnPlusMinus">-</button>
-			<p>{quantity ? quantity : 0}</p>
-			<button className="increase BtnPlusMinus">+</button>
-		</div>
+		<>
+			{
+				addToCart ? (
+					<div className="quantity">
+						<button
+							className="decrease BtnPlusMinus"
+							onClick={() => DecriseProduct()}
+						>-</button>
+						<p>{quantity ? quantity : 1}</p>
+						<button
+							className="increase BtnPlusMinus"
+							onClick={() => setQuantity(quantity + 1)}
+						>+</button>
+					</div>
+				) :
+					<button
+						className='addToCart btn'
+						onClick={() => setAddToCart(true)}
+					>
+						Add to Cart
+					</button>
+			}
+		</>
+
 	)
 }	
