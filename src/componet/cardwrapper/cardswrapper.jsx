@@ -1,4 +1,4 @@
-import useProduct from '../hook/useProduct'
+import useProduct from '../../hook/useProduct'
 import './card.css'
 import Cards from './cards/cards'
 
@@ -10,7 +10,7 @@ const Card = () => {
             <div className='cardsWrapper container'>
                 {value?.length > 0 ? (
                     value.map(item => (
-                        <Cards key={item.id} product={item} />
+                        < Cards product={item} key={item.id} id={item.id} />
                     ))
                 ) : (
                     <p>Loading...</p>

@@ -1,42 +1,42 @@
 import './quantitybutton.css'
+import { useCart } from '../../../hook/CartContext';
 
-import { useState } from 'react'
+export default function QuantityButton({ product }) {
 
-export default function QuantityButton() {
-	const [addToCart, setAddToCart] = useState(false);
-	const [quantity, setQuantity] = useState(0);
+	const { cart, addToCart, decreaseQuantity } = useCart();
 
-	function DecriseProduct() {
-		setQuantity(quantity - 1)
-		if (quantity <= 0) {
-			setQuantity(0)
-			setAddToCart(false)
-		}
-	}
+	// Находим этот товар в корзине (если он уже добавлен)
+	const cartItem = cart.find(item => item.id === product.id);
+	const quantity = cartItem?.quantity || 0;
+
 	return (
 		<>
-			{
-				addToCart ? (
-					<div className="quantity">
-						<button
-							className="decrease BtnPlusMinus"
-							onClick={() => DecriseProduct()}
-						>-</button>
-						<p>{quantity ? quantity : 1}</p>
-						<button
-							className="increase BtnPlusMinus"
-							onClick={() => setQuantity(quantity + 1)}
-						>+</button>
-					</div>
-				) :
+			{quantity > 0 ? (
+				<div className="quantity">
 					<button
-						className='addToCart btn'
-						onClick={() => setAddToCart(true)}
+						className="decrease BtnPlusMinus"
+						onClick={() => decreaseQuantity(product.id)}
 					>
-						Add to Cart
+						-
 					</button>
-			}
-		</>
 
-	)
-}	
+					<p>{quantity}</p>
+
+					<button
+						className="increase BtnPlusMinus"
+						onClick={() => addToCart(product)}
+					>
+						+
+					</button>
+				</div>
+			) : (
+				<button
+					className='addToCart btn'
+					onClick={() => addToCart(product)}
+				>
+					Add to Cart
+				</button>
+			)}
+		</>
+	);
+}
