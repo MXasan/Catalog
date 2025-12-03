@@ -54,20 +54,21 @@ export function CartProvider({ children }) {
     setCart(prev => prev.filter(item => item.id !== productId));
   }
 
-  // Установить конкретное количество (используем, например, в input)
-  function setQuantityForProduct(productId, newQty) {
-    const qty = Math.max(0, Math.floor(newQty)); // безопасно
-    setCart(prev => {
-      if (qty === 0) return prev.filter(item => item.id !== productId);
-      const exists = prev.find(i => i.id === productId);
-      if (exists) {
-        return prev.map(i => (i.id === productId ? { ...i, quantity: qty } : i));
-      }
-      // если продукта нет и newQty > 0 — добавить его (нужен объект продукта; тут не добавляем)
-      return prev;
-    });
-  }
+//   // Установить конкретное количество (используем, например, в input)
+//   function setQuantityForProduct(productId, newQty) {
+//     const qty = Math.max(0, Math.floor(newQty)); // безопасно
+//     setCart(prev => {
+//       if (qty === 0) return prev.filter(item => item.id !== productId);
+//       const exists = prev.find(i => i.id === productId);
+//       if (exists) {
+//         return prev.map(i => (i.id === productId ? { ...i, quantity: qty } : i));
+//       }
+//       // если продукта нет и newQty > 0 — добавить его (нужен объект продукта; тут не добавляем)
+//       return prev;
+//     });
+//   }
 
+//   console.log(cart)
   return (
     <CartContext.Provider
       value={{
@@ -75,7 +76,7 @@ export function CartProvider({ children }) {
         addToCart,
         decreaseQuantity,
         removeFromCart,
-        setQuantityForProduct,
+        // setQuantityForProduct,
       }}
     >
       {children}
