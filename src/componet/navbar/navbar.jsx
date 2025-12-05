@@ -1,4 +1,5 @@
 import { Link } from 'react-router'
+import BurgerMenu from '../../assets/burgerMenu.svg'
 import './navbar.css'
 const Navbar = () => {
 	return (
@@ -7,7 +8,6 @@ const Navbar = () => {
 				<Link to='/'>
 					<h2 className='logo'>logo</h2>
 				</Link>
-				{/* <h2 className='logo'>logo</h2> */}
 				<div className='navZone'>
 					<ul>
 						<li>MAXSULOT</li>
@@ -15,9 +15,12 @@ const Navbar = () => {
 						<li>MALUMOT</li>
 					</ul>
 					<Link to='/cart'>
-						<button className='btn'>BUYURTMA</button>
+						<button className='btn navBtn'>BUYURTMA</button>
 					</Link>
 				</div>
+        <div className="burgerMenuWrapper">
+         <img className="burgerMenu" src={BurgerMenu} alt="" />
+        </div>
 			</div>
 		</div>
 	)

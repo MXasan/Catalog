@@ -23,14 +23,21 @@
   justify-content: center;
   flex-direction: column;
 }
-a{
+
+a {
 
   text-decoration-line: none;
   list-style: none;
 }
+
 .container {
   width: 100%;
   max-width: 1400px;
+}
+
+.containerMain {
+  padding: 0 10px;
+
 }
 
 .container__Wapper {
