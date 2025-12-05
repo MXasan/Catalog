@@ -16,7 +16,7 @@ const Cards = ({ product }) => {
               <p>{product.weight}</p>
             </div>
             <div className='cardButton'>
-              <QuantityButton product={product} />
+              <QuantityButton product={product}/>
             </div>
             <div className='cardDescription'>
               <p>{product.description}</p>

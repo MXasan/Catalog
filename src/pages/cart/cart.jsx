@@ -1,3 +1,4 @@
+import QuantityButton from '../../componet/cardwrapper/quantitybutton/quantitybutton'
 import Navbar from '../../componet/navbar/navbar'
 import OrderButton from '../../componet/orderButton/orderButton'
 import { useCart } from '../../hook/CartContext'
@@ -10,18 +11,32 @@ const Cart = () => {
 	return (
 		<>
 			<div className='body'>
-
-				<div className='container'>
+				<div className='container containerCart'>
 					<Navbar />
-					{cart.map(item => (
-						<div className="productCartWrapper">
-							<img src={item.image} alt={item.title} />
-							<h1>{item.title}</h1>
+					<div className="cardsWrapperInCart">
 
-							<button className='btn' onClick={removeFromCart}>remove</button>
-						</div>
+						{cart.map(item => (
+							<div className="productCartWrapper">
+								<img src={item.image} alt={item.title} />
+								<div className="cartInfoBtn">
 
-					))}
+
+									<div className="cartInfo">
+										<h1>{item.title}</h1>
+										<p>weight of: {item.weight}</p>
+									</div>
+									<div className="cartBtn">
+										<button className='btn removeBtn' onClick={() => removeFromCart(item.id)}>remove</button>
+										<div className="quantityBtnCart">
+											<QuantityButton className="quantityBtnCart" product={item} />
+										</div>
+									</div>
+								</div>
+
+							</div>
+
+						))}
+					</div>
 					<OrderButton />
 				</div>
 			</div>
