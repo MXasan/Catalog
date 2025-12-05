@@ -6,7 +6,7 @@
     border-radius: 40px;
 }
 .containerCart{
-    height: 100vh;
+    min-height: 100vh;
 }
 .cardsWrapperInCart img {
     border-radius: 40px;
@@ -24,6 +24,7 @@
     align-items: start;
     flex-wrap: wrap;
     gap: 30px;
+    padding: 100px 0;
 }
 
 .cartInfoBtn {

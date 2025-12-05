@@ -23,7 +23,11 @@
   justify-content: center;
   flex-direction: column;
 }
+a{
 
+  text-decoration-line: none;
+  list-style: none;
+}
 .container {
   width: 100%;
   max-width: 1400px;
