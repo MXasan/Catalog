@@ -15,9 +15,25 @@
 
 @media screen and (max-width: 850px) {
     .header>h1 {
-        color: var(--cream-color);
-        width: 100%;
         font-size: 55px;
-        /* line-height: 90px; */
+    }
+}
+
+@media screen and (max-width: 709px) {
+    .header {
+        align-items: center;
+    }
+
+    .header>h1 {
+        font-size: 49px;
+        line-height: 70px;
+    }
+}
+
+@media screen and (max-width: 557px) {
+    .header>h1 {
+        font-size: 30px;
+        font-weight: 500;
+        line-height: 50px;
     }
 }
