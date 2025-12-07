@@ -15,7 +15,7 @@
     align-items: center;
     justify-content: center;
 }
-.burgerMenu{
+.burgerMenuWrapper{
     display: none;
 }
 ul {
@@ -89,7 +89,7 @@ li {
     .navZone {
         display: none;
     }
-    .burgerMenu{
+    .burgerMenuWrapper{
         display: block;
     }
 }
