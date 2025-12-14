@@ -13,15 +13,20 @@ const Cart = () => {
 			<div className='body'>
 				<div className='container containerCart'>
 					<Navbar />
-					<div className="cardsWrapperInCart">
 
+					<div className="cardsWrapperInCart">
 						{cart.map(item => (
 							<div className="productCartWrapper">
-								<img src={item.image} alt={item.title} />
+								<div className="cartImg">
+									<img src={item.image} alt={item.title} />
+									<div className="cartInfo cartForMobile">
+										<h1>{item.title}</h1>
+										<p>weight of: {item.weight}</p>
+									</div>
+								</div>
+
 								<div className="cartInfoBtn">
-
-
-									<div className="cartInfo">
+									<div className="cartInfo cartForDesctop">
 										<h1>{item.title}</h1>
 										<p>weight of: {item.weight}</p>
 									</div>
@@ -34,7 +39,6 @@ const Cart = () => {
 								</div>
 
 							</div>
-
 						))}
 					</div>
 					<OrderButton />
