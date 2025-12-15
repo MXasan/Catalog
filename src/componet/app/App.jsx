@@ -1,5 +1,5 @@
 import { Route, Routes } from 'react-router-dom'
-import Cart from '../../pages/cart'
+import Cart from '../../pages/cart/cart'
 import Home from '../../pages/home'
 import './App.css'
 

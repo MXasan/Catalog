@@ -7,7 +7,7 @@ const Home = () => {
 		<div className="body">
 			<div className="bgImage">
 				<div className="bgLinerBlack">
-					<div className="container">
+					<div className="container containerMain">
 						<Navbar />
 						<Header />
 					</div>

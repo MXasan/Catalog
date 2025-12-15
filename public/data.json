@@ -61,5 +61,19 @@
 		"category": "Sut mahsuloti",
 		"weight": "750 g",
 		"image": "https://placehold.co/300x400"
+	},
+	{
+		"id": 10,
+		"title": "Kolbasa Lazzatli",
+		"category": "Go‘sht mahsuloti",
+		"weight": "400 g",
+		"image": "https://placehold.co/300x400"
+	},
+	{
+		"id": 11,
+		"title": "Kolbasa Lazzatli",
+		"category": "Go‘sht mahsuloti",
+		"weight": "400 g",
+		"image": "https://placehold.co/300x400"
 	}
 ]

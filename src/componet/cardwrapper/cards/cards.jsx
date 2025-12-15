@@ -1,42 +1,30 @@
 import './cards.css'
-import { useState } from 'react'
 import QuantityButton from '../quantitybutton/quantitybutton'
 
-// products card component with tailwind css
-const Cards = ({ key, product }) => {
-  const [addToCart, setAddToCart] = useState(false)
-  const [quantity, setQuantity] = useState(0)
+const Cards = ({ product }) => {
 
   return (
-    <div className="maincard" key={key}>
-      <div className='cardImageWrapper'>
-        <img src={product.image} alt={product.name} className='cardWrapper' loading='lazy'/>
-      </div>      <div className="cardTitle">
-        <div className="cardInfo">
-          <h3>{product.title}</h3>
-          <p>{product.weight}</p>
-        </div>
-        <div className='cardButton'>
-          {addToCart ? (
-            <QuantityButton
-              onClick={() => setAddToCart(false)}
-              quantity={quantity}
-              setQuantity={setQuantity}
-            />
-          ) : (
-            <button
-              className='addToCart btn'
-              onClick={() => setAddToCart(true)}
-            >
-              Add to Cart
-            </button>
-          )}
-        </div>
-        <div className='cardDescription'>
-          <p>{product.description}</p>
-        </div>
-      </div>
-    </ div>
+    <>
+      {
+        < div className="maincard">
+          <div className='cardImageWrapper'>
+            <img src={product.image} alt={product.name} className='cardWrapper' loading='lazy' />
+          </div>
+          <div className="cardTitle">
+            <div className="cardInfo">
+              <h3>{product.title}</h3>
+              <p>{product.weight}</p>
+            </div>
+            <div className='cardButton'>
+              <QuantityButton product={product}/>
+            </div>
+            <div className='cardDescription'>
+              <p>{product.description}</p>
+            </div>
+          </div>
+        </ div >
+      }
+    </>
   )
 }
 

@@ -1,19 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&display=swap');
 
 * {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-	/* border: 1px solid red; */
-	font-family: 'IBM Plex Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* border: 1px solid red; */
+  font-family: 'IBM Plex Sans', sans-serif;
 }
 
 :root {
-	--cream-color: #eeeeee;
-	--grey-color: #D9D9D9;
-	--burgandy-color: #8b0000;
-	--burgandy-color-50: #8b000079;
-	--text-size: 18px;
+  --cream-color: #eeeeee;
+  --grey-color: #D9D9D9;
+  --burgandy-color: #8b0000;
+  --burgandy-color-50: #8b000079;
+  --text-size: 18px;
 }
 
 .body {
@@ -24,17 +24,29 @@
   flex-direction: column;
 }
 
-.container {
-	width: 100%;
-	max-width: 1400px;
+a {
+
+  text-decoration-line: none;
+  list-style: none;
 }
+
+.container {
+  width: 100%;
+  max-width: 1400px;
+}
+
+.containerMain {
+  padding: 0 10px;
+
+}
+
 .container__Wapper {
-	width: 100%;
-	max-width: 1400px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	flex-direction: column;
+  width: 100%;
+  max-width: 1380px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
 h1 {
@@ -51,11 +63,19 @@ h1 {
   font-size: var(--text-size);
   border: none;
   cursor: pointer;
+  max-height: 53px;
 }
-button{
+
+button {
   border: none;
 }
 
-button{
-	border: none;
+button {
+  border: none;
+}
+
+@media screen and (max-width: 1385px) {
+  .container__Wapper {
+    max-width: 1286px;
+  }
 }

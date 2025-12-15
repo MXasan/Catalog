@@ -6,8 +6,40 @@
 	gap: 50px;
 	flex-wrap: wrap;
 	flex-direction: row;
-	max-width: 98%;
+	width: auto;
+
+	padding: 0 10px;
 }
-.titleForPage{
+
+.titleForPage {
 	margin: 60px 0;
+}
+
+@media screen and (max-width: 1385px) {
+	.cardsWrapper {
+		gap: 20px;
+		max-width: 960px;
+	}
+}
+@media screen and (max-width: 965px) {
+	.cardsWrapper {
+		gap: 20px;
+		max-width: 640px;
+	}
+}
+@media screen and (max-width: 640px) {
+	.cardsWrapper {
+		gap: 20px;
+		max-width: 510px;
+	}
+	.titleForPage{
+		font-size: 30px;
+	}
+}
+@media screen and (max-width: 635px) {
+	.cardsWrapper {
+		gap: 40px;
+		padding: 0;
+		max-width: 300px;
+	}
 }
