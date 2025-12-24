@@ -1,4 +1,5 @@
 import Card from '../componet/cardwrapper/cardswrapper'
+import Footer from '../componet/footer/footer'
 import Header from '../componet/header/header'
 import Navbar from '../componet/navbar/navbar'
 
@@ -16,6 +17,7 @@ const Home = () => {
 			<div className="container__Wapper">
 				<Card />
 			</div>
+			<Footer />
 		</div>
 	)
 }
