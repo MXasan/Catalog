@@ -21,25 +21,34 @@
 		max-width: 960px;
 	}
 }
+
 @media screen and (max-width: 965px) {
 	.cardsWrapper {
 		gap: 20px;
 		max-width: 640px;
 	}
 }
+
 @media screen and (max-width: 640px) {
 	.cardsWrapper {
 		gap: 20px;
 		max-width: 510px;
 	}
-	.titleForPage{
+
+	.titleForPage {
 		font-size: 30px;
 	}
+
+	.cardImage {
+		border-radius: 20px;
+	}
 }
+
 @media screen and (max-width: 635px) {
 	.cardsWrapper {
 		gap: 40px;
 		padding: 0;
 		max-width: 300px;
 	}
+
 }
