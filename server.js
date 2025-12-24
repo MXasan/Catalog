@@ -2,6 +2,7 @@ import cors from 'cors'
 import dotenv from 'dotenv'
 import express from 'express'
 import mongoose from 'mongoose'
+import Order from './src/models/Order.js'
 import Product from './src/models/Product.js'
 
 dotenv.config()
@@ -36,6 +37,73 @@ app.get('/api/products/:id', async (req, res) => {
 			return res.status(404).json({ message: 'Product not found' })
 		}
 		res.json(product)
+	} catch (error) {
+		res.status(500).json({ message: error.message })
+	}
+})
+
+// Create new order
+app.post('/api/orders', async (req, res) => {
+	try {
+		const {
+			firstName,
+			lastName,
+			phoneNumber,
+			address,
+			deliveryDateTime,
+			additionalNotes,
+			products,
+		} = req.body
+
+		// Validate required fields
+		if (
+			!firstName ||
+			!lastName ||
+			!phoneNumber ||
+			!address ||
+			!deliveryDateTime ||
+			!products ||
+			products.length === 0
+		) {
+			return res.status(400).json({
+				message: "Iltimos, barcha majburiy maydonlarni to'ldiring",
+			})
+		}
+
+		// Calculate total amount
+		const totalAmount = products.reduce(
+			(sum, item) => sum + item.price * item.quantity,
+			0
+		)
+
+		// Create new order
+		const order = new Order({
+			firstName,
+			lastName,
+			phoneNumber,
+			address,
+			deliveryDateTime,
+			additionalNotes,
+			products,
+			totalAmount,
+		})
+
+		const savedOrder = await order.save()
+		res.status(201).json({
+			message: 'Buyurtma muvaffaqiyatli qabul qilindi!',
+			order: savedOrder,
+		})
+	} catch (error) {
+		console.error('Order creation error:', error)
+		res.status(500).json({ message: 'Xatolik yuz berdi: ' + error.message })
+	}
+})
+
+// Get all orders (for admin/agent view)
+app.get('/api/orders', async (req, res) => {
+	try {
+		const orders = await Order.find().sort({ createdAt: -1 })
+		res.json(orders)
 	} catch (error) {
 		res.status(500).json({ message: error.message })
 	}
