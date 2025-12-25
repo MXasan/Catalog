@@ -15,6 +15,8 @@
 
 .cardsWrapperInCart img {
     border-radius: 40px;
+    width: 300px;
+    height: 400px;
 }
 
 .cardsWrapperInCart {
@@ -123,6 +125,7 @@
     .cardsWrapperInCart img {
         max-width: 200px;
         height: 250px;
+        border-radius: 20px;
     }
 
     .cardsWrapperInCart {
