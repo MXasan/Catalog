@@ -13,10 +13,13 @@ const Cards = ({ product }) => {
           <div className="cardTitle">
             <div className="cardInfo">
               <h3>{product.title}</h3>
+            </div>
+            <div className="cardInfo">
               <p>{product.weight}</p>
+              <p>{product.price}</p>
             </div>
             <div className='cardButton'>
-              <QuantityButton product={product}/>
+              <QuantityButton product={product} />
             </div>
             <div className='cardDescription'>
               <p>{product.description}</p>

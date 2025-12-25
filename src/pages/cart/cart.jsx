@@ -5,47 +5,58 @@ import { useCart } from '../../hook/CartContext'
 import './cart.css'
 
 const Cart = () => {
-	const { cart, removeFromCart } = useCart();
-	// console.log(cart)
+  const { cart, removeFromCart } = useCart();
 
-	return (
-		<>
-			<div className='body'>
-				<div className='container containerCart'>
-					<Navbar />
+  const totalSum = cart.reduce((acc, item) => {
+    return acc + item.price * item.quantity;
+  }, 0);
 
-					<div className="cardsWrapperInCart">
-						{cart.map(item => (
-							<div className="productCartWrapper">
-								<div className="cartImg">
-									<img src={item.image} alt={item.title} />
-									<div className="cartInfo cartForMobile">
-										<h1>{item.title}</h1>
-										<p>weight of: {item.weight}</p>
-									</div>
-								</div>
+  return (
+    <div className='body'>
+      <div className='container containerCart'>
+        <Navbar />
 
-								<div className="cartInfoBtn">
-									<div className="cartInfo cartForDesctop">
-										<h1>{item.title}</h1>
-										<p>weight of: {item.weight}</p>
-									</div>
-									<div className="cartBtn">
-										<button className='btn removeBtn' onClick={() => removeFromCart(item.id)}>remove</button>
-										<div className="quantityBtnCart">
-											<QuantityButton className="quantityBtnCart" product={item} />
-										</div>
-									</div>
-								</div>
+        <div className="cardsWrapperInCart">
+          {cart.map(item => (
+            <div className="productCartWrapper" key={item.id}>
+              <div className="cartImg">
+                <img src={item.image} alt={item.title} />
+                <div className="cartInfo cartForMobile">
+                  <h1>{item.title}</h1>
+                  <p>weight of: {item.weight}</p>
+                  <p>price of: {item.price}</p>
+                </div>
+              </div>
 
-							</div>
-						))}
-					</div>
-					<OrderButton />
-				</div>
-			</div>
-		</>
-	)
-}
+              <div className="cartInfoBtn">
+                <div className="cartInfo cartForDesctop">
+                  <h1>{item.title}</h1>
+                  <p>weight of: {item.weight}</p>
+                  <p>price of: {item.price}</p>
+                </div>
 
-export default Cart
+                <div className="cartBtn">
+                  <button
+                    className='btn removeBtn'
+                    onClick={() => removeFromCart(item.id)}
+                  >
+                    remove
+                  </button>
+
+                  <QuantityButton product={item} />
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* TOTAL */}
+        <h2>Total: ${totalSum}</h2>
+
+        <OrderButton />
+      </div>
+    </div>
+  );
+};
+
+export default Cart;
